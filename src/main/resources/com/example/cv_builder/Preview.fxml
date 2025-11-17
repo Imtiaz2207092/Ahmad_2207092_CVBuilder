@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.control.Separator?>
+
+<VBox spacing="20" alignment="TOP_CENTER" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.cv_builder.PreviewController"
+      style="-fx-background-color: linear-gradient(to bottom, #1e1e2f, #2b2b42); -fx-padding: 30;">
+
+
+    <ImageView fx:id="photoView" fitWidth="120" fitHeight="120"
+               style="-fx-border-color: white; -fx-border-width: 2; -fx-border-radius: 10;"/>
+
+
+    <VBox spacing="5" alignment="CENTER_LEFT" style="-fx-padding: 10;">
+        <Label fx:id="nameText" style="-fx-text-fill: #50e3c2; -fx-font-size: 20px; -fx-font-weight: bold;"/>
+        <Label fx:id="emailText" style="-fx-text-fill: white; -fx-font-size: 14px;"/>
+        <Label fx:id="phoneText" style="-fx-text-fill: white; -fx-font-size: 14px;"/>
+        <Label fx:id="addressText" style="-fx-text-fill: white; -fx-font-size: 14px;"/>
+    </VBox>
+
+    <Separator style="-fx-background-color: #4a90e2;"/>
+
+
+    <VBox spacing="10" alignment="TOP_LEFT">
+        <Label text="Education:" style="-fx-text-fill: #50e3c2; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+        <Label fx:id="educationText" style="-fx-text-fill: white; -fx-font-size: 14px;"/>
+
+        <Label text="Skills:" style="-fx-text-fill: #50e3c2; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+        <Label fx:id="skillsText" style="-fx-text-fill: white; -fx-font-size: 14px;"/>
+
+        <Label text="Experience:" style="-fx-text-fill: #50e3c2; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+        <Label fx:id="experienceText" style="-fx-text-fill: white; -fx-font-size: 14px;"/>
+
+        <Label text="Projects:" style="-fx-text-fill: #50e3c2; -fx-font-size: 16px; -fx-font-weight: bold;"/>
+        <Label fx:id="projectsText" style="-fx-text-fill: white; -fx-font-size: 14px;"/>
+    </VBox>
+
+</VBox>
