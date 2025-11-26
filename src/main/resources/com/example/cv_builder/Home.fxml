@@ -6,9 +6,7 @@
 
 <VBox alignment="CENTER" prefHeight="438.0" prefWidth="481.0" spacing="20" style="-fx-background-color: linear-gradient(to bottom, #1e1e2f, #2b2b42); -fx-padding: 50;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cv_builder.HomeController">
 
-
     <Text style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-fill: white;" text="Welcome To My CV BUILDER" wrappingWidth="380.2421875" />
-
 
     <Button onAction="#openCreateCV" style="-fx-background-color: #4a90e2; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10;" text="Create Your CV" />
 

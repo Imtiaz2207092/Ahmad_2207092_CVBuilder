@@ -23,7 +23,6 @@ public class CreateCVController {
     @FXML private TextArea projectsField;
     @FXML private TextField photoPathField;
 
-
     @FXML
     private void choosePhoto() {
         FileChooser fileChooser = new FileChooser();
@@ -36,7 +35,6 @@ public class CreateCVController {
             photoPathField.setText(selectedFile.getAbsolutePath());
         }
     }
-
 
     @FXML
     private void generateCV(ActionEvent event) throws IOException {

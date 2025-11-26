@@ -11,7 +11,6 @@ public class CVModel {
     private String projects;
     private String photoPath;
 
-
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
 

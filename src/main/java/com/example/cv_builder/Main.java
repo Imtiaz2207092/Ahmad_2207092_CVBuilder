@@ -10,10 +10,18 @@ import java.io.IOException;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        DatabaseManager.getInstance();
+        
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("Home.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 320, 240);
         stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
+    }
+
+    @Override
+    public void stop() throws Exception {
+        DatabaseManager.getInstance().closeConnection();
+        super.stop();
     }
 }

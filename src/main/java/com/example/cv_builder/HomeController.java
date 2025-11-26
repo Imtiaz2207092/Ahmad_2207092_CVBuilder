@@ -16,7 +16,6 @@ public class HomeController {
             FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("CreateCV.fxml"));
             Scene scene = new Scene(fxmlLoader.load());
 
-
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.setTitle("Create Your CV");
@@ -28,3 +27,4 @@ public class HomeController {
     }
 
 }
+
