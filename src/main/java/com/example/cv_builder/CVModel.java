@@ -1,6 +1,7 @@
 package com.example.cv_builder;
 
 public class CVModel {
+    private Integer id;
     private String name;
     private String email;
     private String phone;
@@ -10,6 +11,26 @@ public class CVModel {
     private String experience;
     private String projects;
     private String photoPath;
+
+    public CVModel() {
+    }
+
+    public CVModel(Integer id, String name, String email, String phone, String address,
+                    String education, String skills, String experience, String projects, String photoPath) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.education = education;
+        this.skills = skills;
+        this.experience = experience;
+        this.projects = projects;
+        this.photoPath = photoPath;
+    }
+
+    public Integer getId() { return id; }
+    public void setId(Integer id) { this.id = id; }
 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
