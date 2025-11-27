@@ -8,14 +8,22 @@
 
     <Text style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-fill: white;" text="Welcome To My CV BUILDER" />
 
-    <Button onAction="#openCreateCV" style="-fx-background-color: #4a90e2; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-pref-width: 150;" text="Create Your CV" />
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="createButton" onAction="#openCreateCV" style="-fx-background-color: #4a90e2; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-pref-width: 150;" text="Create New CV" />
+        <Button fx:id="viewButton" onAction="#viewCV" style="-fx-background-color: #50e3c2; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-pref-width: 120;" text="View CV" disable="true" />
+        <Button fx:id="editButton" onAction="#editCV" style="-fx-background-color: #f5a623; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-pref-width: 120;" text="Edit CV" disable="true" />
+        <Button fx:id="deleteButton" onAction="#deleteCV" style="-fx-background-color: #e74c3c; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-pref-width: 120;" text="Delete CV" disable="true" />
+    </HBox>
 
-    <TableView fx:id="cvTableView" style="-fx-background-color: rgba(255,255,255,0.1);" VBox.vgrow="ALWAYS">
+    <StackPane VBox.vgrow="ALWAYS">
+        <TableView fx:id="cvTableView" style="-fx-background-color: rgba(255,255,255,0.1);" VBox.vgrow="ALWAYS">
         <columns>
-            <TableColumn fx:id="nameColumn" text="Name" prefWidth="200" />
-            <TableColumn fx:id="emailColumn" text="Email" prefWidth="250" />
-            <TableColumn fx:id="phoneColumn" text="Phone" prefWidth="150" />
+        <TableColumn fx:id="nameColumn" text="Name" prefWidth="200" />
+        <TableColumn fx:id="emailColumn" text="Email" prefWidth="250" />
+        <TableColumn fx:id="phoneColumn" text="Phone" prefWidth="150" />
         </columns>
     </TableView>
+    <ProgressIndicator fx:id="progressIndicator" visible="false" />
+    </StackPane>
 
 </VBox>

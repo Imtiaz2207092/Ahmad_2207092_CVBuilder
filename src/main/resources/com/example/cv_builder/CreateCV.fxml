@@ -5,6 +5,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressIndicator?>
 <?import javafx.scene.layout.HBox?>
 
 <VBox spacing="20" alignment="TOP_CENTER" xmlns="http://javafx.com/javafx"
@@ -49,7 +50,17 @@
         </HBox>
     </GridPane>
 
-    <Button text="Generate CV"
-            style="-fx-background-color: #50e3c2; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10;"
-            onAction="#generateCV"/>
+    <HBox spacing="15" alignment="CENTER">
+        <Button fx:id="saveButton" text="Save CV"
+                style="-fx-background-color: #4a90e2; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-pref-width: 150;"
+                onAction="#saveCV"/>
+        <Button fx:id="generateButton" text="Generate Preview"
+                style="-fx-background-color: #50e3c2; -fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-pref-width: 150;"
+                onAction="#generateCV"/>
+        <Button text="Back to Home"
+                style="-fx-background-color: #95a5a6; -fx-text-fill: white; -fx-font-size: 14px; -fx-font-weight: bold; -fx-background-radius: 10; -fx-pref-width: 150;"
+                onAction="#goBackToHome"/>
+    </HBox>
+
+    <ProgressIndicator fx:id="progressIndicator" visible="false" />
 </VBox>
